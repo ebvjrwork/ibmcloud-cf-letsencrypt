@@ -22,7 +22,7 @@ http://YOUR_DOMAIN_HERE/.well-known/acme-challenge/YYYYYYYYYYYYYYYYYYYYYYYYYYYYY
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 ```
-- Open a new terminal and cd to this repository, create `.well-known/acme-challenge` folder by running `mkdir -p .well-known/acme-challenge` and run `echo 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX' > 'public/.well-known/acme-challenge/YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY'`
+- Open a new terminal and cd to this repository, create `public/.well-known/acme-challenge` folder by running `mkdir -p public/.well-known/acme-challenge` and run `echo 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX' > 'public/.well-known/acme-challenge/YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY'`
 - Run the command `ibmcloud cf push letsencrypt-static -d YOUR_DOMAIN_HERE --no-hostname --route-path .well-known/acme-challenge/ -m 64M -b nginx_buildpack`
 - After running the last command, press enter on letsencypt.
 - If succeed, it should display this message:
